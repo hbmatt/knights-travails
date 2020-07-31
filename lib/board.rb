@@ -1,26 +1,6 @@
 class Board
   def initialize(root)
-    @grid = build_board
     @root = root
-  end
-
-  def build_board
-    row = []
-    finished_board = []
-    x = 0
-    y = 0
-
-    until y > 7
-      until x > 7
-        row << [x, y]
-        x += 1
-      end
-      finished_board << row
-      row = []
-      y += 1
-    end
-
-    finished_board
   end
 
   def build_path(initial, final, queue = [@root], path = [])
